@@ -81,8 +81,8 @@ export default (class Themes extends Component {
     setTimeout(function() {
         _self.queryData()
     }, 1000)
-
   }
+
 
   queryData() {
     var _self = this
@@ -96,8 +96,6 @@ export default (class Themes extends Component {
       })
       _self.drawChart(container, data, title)
     })
-
-
   }
 
   drawChart(container, data, title) {

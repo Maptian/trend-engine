@@ -42,7 +42,8 @@ export default (class Funders extends Component {
         style: 'mapbox://styles/dmccarey/cjk8sja2n1q7v2so18lcniue0', // stylesheet location
         center: [-1.479,52.807], // starting position [lng, lat]
         pitch: 40,
-        zoom: 6 // starting zoom
+        minZoom: 7,
+        zoom: 7 // starting zoom
     })
     var map = this.map
     map.addControl(new mapboxgl.NavigationControl())
@@ -54,9 +55,9 @@ export default (class Funders extends Component {
         'type': 'circle',
         'source': {
             type: 'vector',
-            url: 'mapbox://dmccarey.ado0y94v'
+            url: 'mapbox://dmccarey.2jssqyoc'
         },
-        'source-layer': 'grant-points-1-9deb3i',
+        'source-layer': 'grants-1-1w8sxp',
         'paint': {
             // make circles larger as the user zooms from z12 to z22
             'circle-radius': {
@@ -84,14 +85,16 @@ export default (class Funders extends Component {
         }
     });
 
+
+
     map.addLayer({
         'id': 'grants-2',
         'type': 'circle',
         'source': {
             type: 'vector',
-            url: 'mapbox://dmccarey.799hzec5'
+            url: 'mapbox://dmccarey.5ko3i90l'
         },
-        'source-layer': 'grant-points-2-8l5wsm',
+        'source-layer': 'grants-2-1w7wjg',
         'paint': {
             // make circles larger as the user zooms from z12 to z22
             'circle-radius': {
@@ -100,8 +103,8 @@ export default (class Funders extends Component {
               'stops': [
                 [{zoom: 4, value: 0}, 1],
                 [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
+                [{zoom: 6, value: 0}, 2],
+                [{zoom: 6, value: 400000}, 5],
                 [{zoom: 8, value: 0}, 2],
                 [{zoom: 8, value: 400000}, 30],
                 [{zoom: 10, value: 0}, 2],
@@ -120,473 +123,14 @@ export default (class Funders extends Component {
     });
 
 
-    map.addLayer({
-        'id': 'grants-3',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.1s5rr3wi'
-        },
-        'source-layer': 'grant-points-3-4we2nz',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-4',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.1pcq9i82'
-        },
-        'source-layer': 'grant-points-4-5m38iu',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-5',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.3mivavc6'
-        },
-        'source-layer': 'grant-points-5-btn8i2',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-6',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.djglp0oo'
-        },
-        'source-layer': 'grant-points-6-3pgjbl',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-7',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.6li3ogoi'
-        },
-        'source-layer': 'grant-points-7-bpoow7',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-
-    map.addLayer({
-        'id': 'grants-8',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.02h7o9wl'
-        },
-        'source-layer': 'grant-points-8-2vxlq1',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-9',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.64rwjuj1'
-        },
-        'source-layer': 'grant-points-9-4k86o4',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-10',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.8z5esh0e'
-        },
-        'source-layer': 'grant-points-10-6gqotu',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-11',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.awnpe1w8'
-        },
-        'source-layer': 'grant-points-11-0tz8is',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-12',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.arlxzl80'
-        },
-        'source-layer': 'grant-points-12-dwj9zp',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-    map.addLayer({
-        'id': 'grants-13',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.0fbwpld1'
-        },
-        'source-layer': 'grant-points-13-bkd8ck',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-
-    map.addLayer({
-        'id': 'grants-14',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.dhs4vn13'
-        },
-        'source-layer': 'grant-points-14-bpvlq9',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
-    });
-
-
-    map.addLayer({
-        'id': 'grants-15',
-        'type': 'circle',
-        'source': {
-            type: 'vector',
-            url: 'mapbox://dmccarey.cxx8it1d'
-        },
-        'source-layer': 'grant-points-15-1o9san',
-        'paint': {
-            // make circles larger as the user zooms from z12 to z22
-            'circle-radius': {
-              'property': 'amountAwarded',
-              'type': 'exponential',
-              'stops': [
-                [{zoom: 4, value: 0}, 1],
-                [{zoom: 4, value: 400000}, 3],
-                [{zoom: 5, value: 0}, 2],
-                [{zoom: 5, value: 400000}, 5],
-                [{zoom: 8, value: 0}, 2],
-                [{zoom: 8, value: 400000}, 30],
-                [{zoom: 10, value: 0}, 2],
-                [{zoom: 10, value: 400000}, 40]
-              ]
-            },
-            // color circles by ethnicity, using a match expression
-            // https://www.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-            'circle-color': '#E8873C',
-            'circle-opacity': 0,
-            'circle-stroke-color': '#E8873C',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-opacity': 0.5,
-            'circle-pitch-alignment': 'map'
-        }
+    /*_self.popup = new mapboxgl.Popup()
+    map.on('mouseover', 'grants-1', function (e) {
+      _self.showPopup(e)
     })
+    map.on('mouseover', 'grants-2', function (e) {
+      _self.showPopup(e)
+    })
+    */
 
     _self.filterMap(_self.state.org, _self.state.year)
 
@@ -594,6 +138,23 @@ export default (class Funders extends Component {
 
   }
 
+
+  showPopup(e) {
+    var _self = this
+    console.log(e.features)
+    var coordinates = e.features[0].geometry.coordinates.slice();
+    var description = 'test'
+    // Ensure that if the map is zoomed out such that multiple
+    // copies of the feature are visible, the popup appears
+    // over the copy being pointed to.
+    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+    }
+    _self.popup
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(_self.map);
+  }
 
   componentWillReceiveProps(newProps) {
     var args = newProps.location.pathname.split('/')
@@ -633,19 +194,6 @@ export default (class Funders extends Component {
    }
    this.map.setFilter('grants-1', filters)
    this.map.setFilter('grants-2', filters)
-   this.map.setFilter('grants-3', filters)
-   this.map.setFilter('grants-4', filters)
-   this.map.setFilter('grants-5', filters)
-   this.map.setFilter('grants-6', filters)
-   this.map.setFilter('grants-7', filters)
-   this.map.setFilter('grants-8', filters)
-   this.map.setFilter('grants-9', filters)
-   this.map.setFilter('grants-10', filters)
-   this.map.setFilter('grants-11', filters)
-   this.map.setFilter('grants-12', filters)
-   this.map.setFilter('grants-13', filters)
-   this.map.setFilter('grants-14', filters)
-   this.map.setFilter('grants-15', filters)
   }
 
 
@@ -700,14 +248,14 @@ export default (class Funders extends Component {
          <ul>
            <li><Link to={ "/funder/All%20Funders" }>All Funders</Link></li>
           { this.state.fundersA.map((item, i) =>
-              <li><Link key={i} to={ "/funder/" + item.name }>{ item.name }</Link></li>
+              <li key={i}><Link to={ "/funder/" + item.name }>{ item.name }</Link></li>
           )}
          </ul>
          </div>
          <div className="col-xs-6">
         <ul>
          { this.state.fundersB.map((item, i) =>
-             <li><Link key={i} to={ "/funder/" + item.name }>{ item.name }</Link></li>
+             <li key={i}><Link to={ "/funder/" + item.name }>{ item.name }</Link></li>
          )}
         </ul>
         </div>
