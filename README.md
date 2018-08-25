@@ -1,3 +1,22 @@
+# 360Giving Trend Engine
+
+This app visualizes aggregate data from the [360Giving Grantnav](http://grantnav.threesixtygiving.org/) database. It was developed as part of the 360Giving Digging the Data Challenge. It is provided under the [Creative Commons 4.0 license](https://creativecommons.org/licenses/by/4.0/).
+
+
+## Dev
+Clone this repo and run:
+
+```
+npm install
+```
+
+then:
+
+```
+npm start
+```
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
