@@ -1,6 +1,6 @@
 # 360Giving Trend Engine
 
-This app visualizes aggregate data from the [360Giving Grantnav](http://grantnav.threesixtygiving.org/) database. It was developed as part of the 360Giving Digging the Data Challenge. It is provided under the [Creative Commons 4.0 license](https://creativecommons.org/licenses/by/4.0/).
+This app visualizes aggregate data from the 360Giving [Grantnav](http://grantnav.threesixtygiving.org/) database. It was developed as part of the 360Giving [Digging the Data](https://challenge.threesixtygiving.org/) Challenge. It is provided under the [Creative Commons 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
 
 ## Dev
